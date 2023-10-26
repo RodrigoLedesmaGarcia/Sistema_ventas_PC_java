@@ -1,0 +1,26 @@
+package www.rodrigoledesmagarcia.com.mx.modelo;
+public class Monitor {
+
+    private final int idMonitor;
+    private String marca;
+    private  double tamanio;
+    private static int contadorMonitores;
+
+    private Monitor() {
+        idMonitor = ++ contadorMonitores;
+    }
+
+    public Monitor(String marca, double tamanio) {
+        this();
+        this.marca = marca;
+        this.tamanio = tamanio;
+
+    }
+    @Override
+    public String toString() {
+        return "Monitor" +
+                "\nId Monitor: " + idMonitor +
+                "\nMarca: " + marca +
+                "\nTamaño: " + tamanio+" pulgadas";
+    }
+}
